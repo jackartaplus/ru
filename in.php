@@ -10,10 +10,11 @@ $remote  = @$_SERVER['REMOTE_ADDR'];
 
 //if(filter_var($client, FILTER_VALIDATE_IP))
 //    $ip = $client;
-if(filter_var($forward, FILTER_VALIDATE_IP))
-    $ip = $forward;
-else
-    $ip = $remote;
+//if(filter_var($forward, FILTER_VALIDATE_IP))
+//    $ip = $forward;
+//else
+
+$ip = $_SERVER['HTTP_DO_CONNECTING_IP'];
 
 $bg = @intval($_POST['bg']);
 $bp = @intval($_POST['bp']);
